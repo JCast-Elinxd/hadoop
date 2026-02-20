@@ -1,0 +1,54 @@
+
+services:
+         
+  namenode:
+    build: .
+    container_name: namenode
+    hostname: namenode-master
+    ports:
+      - "9870:9870"
+      - "50030:50030" 
+    volumes:
+      - ./data:/data
+    command: bash -c "
+      hdfs namenode -format -force &&
+      hdfs namenode"
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+
+  yarnmaster:
+    build: .
+    container_name: yarnmaster
+    hostname: yarnmaster
+    ports:
+      - "8088:8088"
+      - "19888:19888"
+    depends_on:
+      - namenode
+    command: yarn resourcemanager
+
+  datanode:
+    build: .
+    depends_on:
+      - namenode
+      - yarnmaster
+    command: bash -c "
+      hdfs --daemon start datanode &&
+      yarn nodemanager"
+
+  hadoopclient:
+    build: .
+    container_name: hadoop
+    hostname: hadoop-client
+    depends_on:
+      - namenode
+      - yarnmaster
+      - datanode
+    volumes:
+      - ./data:/data
+    command: /bin/bash
+
+
+

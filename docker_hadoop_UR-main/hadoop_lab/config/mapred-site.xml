@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+
+  <property>
+    <name>yarn.app.mapreduce.am.env</name>
+    <value>HADOOP_MAPRED_HOME=/opt/hadoop-3.4.0</value>
+  </property>
+
+  <property>
+    <name>mapreduce.map.env</name>
+    <value>HADOOP_MAPRED_HOME=/opt/hadoop-3.4.0</value>
+  </property>
+
+  <property>
+    <name>mapreduce.reduce.env</name>
+    <value>HADOOP_MAPRED_HOME=/opt/hadoop-3.4.0</value>
+  </property>
+
+  <property>
+    <name>mapreduce.jobhistory.address</name>
+    <value>yarnmaster:10020</value>
+  </property>
+
+  <property>
+    <name>mapreduce.jobhistory.webapp.address</name>
+    <value>yarnmaster:19888</value>
+  </property>
+
+  <property>
+    <name>mapreduce.application.classpath</name>
+    <value>/opt/hadoop-3.4.0/share/hadoop/mapreduce/*,/opt/hadoop-3.4.0/share/hadoop/mapreduce/lib/*,/opt/hadoop-3.4.0/share/hadoop/common/*,/opt/hadoop-3.4.0/share/hadoop/common/lib/*,/opt/hadoop-3.4.0/share/hadoop/yarn/*,/opt/hadoop-3.4.0/share/hadoop/yarn/lib/*,/opt/hadoop-3.4.0/share/hadoop/hdfs/*,/opt/hadoop-3.4.0/share/hadoop/hdfs/lib/*</value>
+  </property>
+</configuration>

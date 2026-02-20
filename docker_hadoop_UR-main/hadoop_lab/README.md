@@ -1,0 +1,124 @@
+# Guía de Comandos para Cluster Hadoop en Docker versión 2025
+
+esta es una referencia rápida para gestionar un entorno Hadoop distribuido con Docker Compose.
+
+
+## 1. Construcción de Imágenes
+
+### 1.1  Compilar la imagen Docker
+docker compose build
+
+### 1.2  Compilar sin usar caché
+docker compose build --no-cache
+
+## 2. Gestión de Contenedores
+
+### 2.1 Iniciar todos los servicios
+docker compose up -d
+
+### 2.2 Escalar a 3 DataNodes
+docker compose up --scale datanode=3 -d datanode
+
+### 2.3 Reiniciar contenedores
+docker compose restart <servicio>
+docker compose restart yarnmaster
+
+
+### 2.4 Detener contenedores 
+
+#### Detener todos los contenedores
+docker compose down
+
+#### Detener y eliminar volúmenes
+docker compose down -v
+
+#### Detener y limpiar contenedores huérfanos
+docker compose down --remove-orphans
+
+#### Detener todos los servicios sin eliminar
+docker compose stop
+
+### 2.5 Limpieza de recursos
+
+#### Eliminar contenedores detenidos no utilizados
+docker container prune
+
+#### Eliminar imágenes no utilizadas
+docker image prune
+
+
+## 3. Acceso a Contenedores
+
+### 3.1 Acceder a terminales
+
+#### Entrar al cliente de Hadoop ( puede rompe nodos)
+docker compose run hadoopclient
+
+#### Cliente sin afectar nodos (si ves que el anterio rompio un nod)
+docker compose run --rm --no-deps hadoopclient bash
+
+#### Entrar al contenedor yarnmaster
+docker compose exec yarnmaster /bin/bash
+
+#### Entrar al contenedor namenode
+docker compose exec namenode /bin/bash
+
+#### Entrar a un datanode específico (ej. datanode-2)
+docker compose exec --index 2 datanode /bin/bash
+
+### 3.2 Información útil de contenedores
+
+#### Ver IP de un contenedor específico
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container-id>
+
+#### Ver logs en tiempo real de un contenedor
+docker logs -f <container-id>
+
+#### Ver contenedores activos del clúster
+docker compose ps
+
+## 4. Uso de HDFS
+### 4.1  Ver estado de los DataNodes
+###      debe estar dentr0 del cliente de hadoop
+hdfs dfsadmin -report
+
+### 4.2 Inicializar estructura en HDFS
+hadoop fs -mkdir /user
+
+hadoop fs -mkdir /user/root
+
+hadoop fs -mkdir input
+
+### 4.3 Subir archivos a HDFS
+hadoop fs -put /data/input/sherlock.txt /user/root/input
+
+### 4.4 Descargar resultados desde HDFS a nuestro equipo
+hadoop fs -get out/ /data/
+
+
+### 4.5 listarlos archivos  que estan en HDFS
+hadoop fs -ls /
+
+hadoop fs -ls /user/root/input
+
+
+### 4.6 Ver contenido de archivos HDFS
+hadoop fs -cat /ruta/al/archivo
+
+### 4.7  Ver procesos de YARN
+###      debe estar dentr0 del cliente de hadoop o en tarn
+yarn application -list
+
+
+## 5. Ejecutar un Trabajo MapReduce
+python3 /data/wordcountlab1.py -r hadoop --output-dir out hdfs:///user/root/input 
+
+
+## 6   Borrar todo y empezar desde cero OJO TODO ES TODO el entorno Docker (contenedores, imágenes, volúmenes y redes)
+### usar con precaución
+
+docker compose down -v --remove-orphans 
+
+docker system prune -a --volumes -f
+
+
