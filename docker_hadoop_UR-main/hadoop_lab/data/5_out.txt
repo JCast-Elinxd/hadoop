@@ -1,0 +1,20 @@
+"Arthur Conan Doyle"	8
+"Charles Dickens"	4
+"Mary Roberts Rinehart"	2
+"Oliver Wendell Holmes"	2
+"Alexandre Dumas"	2
+"Anthony Trollope"	2
+"Sir Arthur Conan Doyle"	2
+"Charles Reade"	1
+"Doris Stevens"	1
+"Elbridge S. Brooks"	1
+"Elizabeth Cleghorn Gaskell"	1
+"Epictetus"	1
+"Ernest Thompson Seton"	1
+"Fergus Hume"	1
+"Francis Hopkinson Smith"	1
+"Friedrich Hebbel"	1
+"George Meredith"	1
+"Georges Ohnet"	1
+"Georgina Pell Curtis"	1
+"Giacomo Casanova"	1
