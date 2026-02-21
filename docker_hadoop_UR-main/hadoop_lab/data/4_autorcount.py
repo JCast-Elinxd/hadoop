@@ -11,21 +11,21 @@ class WordCount(MRJob):
                    reducer=self.reducer),
 			MRStep(reducer=self.reducer_top)]
 
-	def mapper(self, _, line):
+	def mapper(self, _, line): 
 		path = os.environ['mapreduce_map_input_file']
 		source = path.split("/")[-1]
-		if source.startswith("olympic"):return
+		if source.startswith("olympic"):return # Si hace parte de la base de tweets, no lo procesa
 		
 		words = line.split(" ")
 		for word in words:
-			if word == "Author:":
-				yield " ".join(words[1:]), 1
+			if word == "Author:": # Si la palabra es Author, se asume que el siguiente string es el autor del libro, y se cuenta por autor
+				yield " ".join(words[1:]), 1 
 
 	def reducer (self, key_pair, counts):
-		yield None, (key_pair, sum(counts))
+		yield None, (key_pair, sum(counts)) # Cuenta por autor, sin importar el libro
 
 	def reducer_top(self, _, wc_pairs):
-		sorted_pairs = sorted(wc_pairs, key=lambda x: x[1], reverse=True)[:20] 
+		sorted_pairs = sorted(wc_pairs, key=lambda x: x[1], reverse=True)[:20] # Saca los 20 autores más comunes
 		for wc_pairs, count in sorted_pairs:
 			yield wc_pairs, count
 			

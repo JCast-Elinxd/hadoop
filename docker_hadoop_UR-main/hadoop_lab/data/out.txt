@@ -1,20 +1,20 @@
-["sherlock.txt", "holmes"]	2233
-["pg2600.txt", "pierre"]	1963
-["pg2600.txt", "prince"]	1928
-["pg1259.txt", "artagnan"]	1672
-["pg14.txt", "million"]	1261
-["pg2600.txt", "nat\u00e1sha"]	1213
-["pg2600.txt", "andrew"]	1143
-["pg14.txt", "population"]	1076
-["sherlock.txt", "gutenberg"]	1026
-["pg2600.txt", "himself"]	1020
-["sherlock.txt", "should"]	980
-["sherlock.txt", "project"]	960
-["pg2600.txt", "princess"]	916
-["pg14.txt", "billion"]	909
-["sherlock.txt", "before"]	894
-["pg2600.txt", "french"]	881
-["pg14.txt", "government"]	854
-["pg1259.txt", "porthos"]	839
-["pg2600.txt", "before"]	835
-["sherlock.txt", "little"]	808
+"gutenberg"	5832
+"little"	5812
+"before"	5758
+"project"	5364
+"should"	5221
+"himself"	4634
+"without"	4014
+"people"	4010
+"thought"	3678
+"through"	3638
+"nothing"	3305
+"another"	2886
+"prince"	2781
+"looked"	2776
+"father"	2684
+"seemed"	2535
+"always"	2477
+"though"	2441
+"something"	2381
+"against"	2370

@@ -6,21 +6,22 @@ def generar_lista_gutenberg(n):
     lista = []
     for i in range(n):
         index = random.randint(0,5000)
-        item = f"https://www.gutenberg.org/cache/epub/{index}/pg{index}.txt"
+        item = f"https://www.gutenberg.org/cache/epub/{index}/pg{index}.txt" # Aprovecho la estructura de URLs de Gutenberg para generar links aleatorios
         lista.append(item)
     return lista
 
 # Definición de rutas según tu estructura
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-INPUT_DIR = os.path.join(BASE_DIR, "input")
-# El archivo de lista se busca en /data/lista_libros.txt
+BASE_DIR = os.path.dirname(os.path.abspath(__file__)) # Donde está este script
+INPUT_DIR = os.path.join(BASE_DIR, "input") # Se sabe que existe /input por norma general
+
+# El archivo de lista se busca en /data/lista_libros.txt, vacía para efectos practicos
 ARCHIVO_LISTA = os.path.join(BASE_DIR, "lista_libros.txt")
 
-# 2.a Leer los links del archivo
+# 2.a Leer los links del archivo (Comentado pues esta lista está vacía)
 #with open(ARCHIVO_LISTA, 'r') as f:
 #    links = [line.strip() for line in f if line.strip()]
     
-# 2.b Crear una lsita aleatoria (comentar a)
+# 2.b Crear una lista aleatoria 
 links = generar_lista_gutenberg(50)
 
 # 3. Descarga masiva

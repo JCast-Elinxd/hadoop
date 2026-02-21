@@ -20,11 +20,11 @@ class WordCount(MRJob):
 			date = time.gmtime(int(datos[0])/1000).tm_hour # Convierte el timestamp a hora
 			yield date,1
 
-	def reducer (self, date, counts):
+	def reducer (self, date, counts): # Cuenta por hora
 		yield None, (date, sum(counts))
 
 	def reducer_top(self, _, date_pairs):
-		sorted_pairs = sorted(date_pairs, key=lambda x: x[1], reverse=True)
+		sorted_pairs = sorted(date_pairs, key=lambda x: x[1], reverse=True) # Ordena por número de tweets, de mayor a menor
 		for date_pairs, count in sorted_pairs:
 			yield date_pairs, count
 
