@@ -40,4 +40,4 @@ class WordCount(MRJob):
 if __name__== "__main__":
 	WordCount.run()
 
-# python wordcountlab1.py input/sherlock.txt > out.txt
+# python 2_wordcount.py input/* > out.txt
