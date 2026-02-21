@@ -11,8 +11,11 @@ class WordCount(MRJob):
                    reducer=self.reducer),
 			MRStep(reducer=self.reducer_top)]
 
-	# saca el nombre del archivo de donde sale la palabra
 	def mapper(self, _, line):
+		path = os.environ['mapreduce_map_input_file']
+		source = path.split("/")[-1]
+		if source.startswith("olympic"):return
+		
 		words = line.split(" ")
 		for word in words:
 			if word == "Author:":
@@ -30,3 +33,4 @@ if __name__== "__main__":
 	WordCount.run()
 
 # python 4_autorcount.py input/* > 5_out.txt
+# python3 /data/4_autorcount.py -r hadoop --output-dir out hdfs:///user/root/input

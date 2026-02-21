@@ -15,6 +15,8 @@ class WordCount(MRJob):
 	def mapper(self, _, line):
 		path = os.environ['mapreduce_map_input_file']
 		source = path.split("/")[-1]
+		if source.startswith("olympic"):return
+		
 		words =WORD_REGEX.findall(line)
 		for word in words:
 			if len(word) > 5:
@@ -40,4 +42,5 @@ class WordCount(MRJob):
 if __name__== "__main__":
 	WordCount.run()
 
-# python 2_wordcount.py input/* > out.txt
+# python 2_wordcount.py input/* > 3_out.txt
+# python3 /data/2_wordcount.py -r hadoop --output-dir out hdfs:///user/root/input

@@ -25,7 +25,7 @@ class WordCount(MRJob):
 		for i in counts:
 			count += 1
 			sum_tot += i
-		average = sum_tot / count if count > 0 else 0
+		average = sum_tot / count if count > 0 else 0 # Calcula el promedio de caracteres por tweet
 		yield None, average
 
 
