@@ -8,11 +8,11 @@
   </property>
   <property>
     <name>yarn.nodemanager.resource.cpu-vcores</name>
-    <value>1</value>
+    <value>3</value>
   </property>
   <property>
-    <name>yarn.nodemanager.resource.memory-mb</name>
-    <value>2048</value>
+    <name>yarn.nodemanager.resource.memory-mb</name> 
+    <value>3072</value>
   </property>
   <property>
     <name>yarn.nodemanager.log-dirs</name>
@@ -50,4 +50,13 @@
    <name>yarn.application.classpath</name>
         <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*,$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*,$HADOOP_MAPRED_HOME/share/hadoop/common/*,$HADOOP_MAPRED_HOME/share/hadoop/common/lib/*,$HADOOP_MAPRED_HOME/share/hadoop/yarn/*,$HADOOP_MAPRED_HOME/share/hadoop/yarn/lib/*,$HADOOP_MAPRED_HOME/share/hadoop/hdfs/*,$HADOOP_MAPRED_HOME/share/hadoop/hdfs/lib/*</value>
   </property>
+  <property>
+  <name>yarn.nodemanager.resource.detect-hardware-capabilities</name>
+  <value>true</value>
+  </property>
+  <property>
+  <name>yarn.resourcemanager.scheduler.class</name>
+  <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
+  </property>
+
 </configuration>

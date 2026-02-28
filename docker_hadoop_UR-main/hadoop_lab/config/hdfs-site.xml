@@ -24,7 +24,7 @@
   </property>
   <property>
     <name>dfs.blocksize</name>
-    <value>1048576</value>
+    <value>16000000</value>
   </property>
   <property>
     <name>dfs.namenode.handler.count</name>
@@ -32,7 +32,7 @@
   </property>
    <property>
         <name>dfs.replication</name>
-        <value>1</value>
+        <value>3</value>
     </property>
  <property>
       <name>hadoop.tmp.dir</name>

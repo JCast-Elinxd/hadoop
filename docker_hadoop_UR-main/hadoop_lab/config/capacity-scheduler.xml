@@ -1,0 +1,14 @@
+<configuration>
+  <property>
+    <name>yarn.scheduler.capacity.root.queues</name>
+    <value>colaA,colaB</value>
+  </property>
+  <property>
+    <name>yarn.scheduler.capacity.root.colaA.capacity</name>
+    <value>50</value>
+  </property>
+  <property>
+    <name>yarn.scheduler.capacity.root.colaB.capacity</name>
+    <value>50</value>
+  </property>
+</configuration>
