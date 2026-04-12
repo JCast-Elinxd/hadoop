@@ -1,0 +1,147 @@
+Health Care,1990,CNMD,46
+Health Care,1991,SPEX,366
+Health Care,1992,IDXX,56
+Health Care,1993,LAKE,81
+Health Care,1994,HOLX,98
+Health Care,1995,PSSI,195
+Health Care,1996,OXGN,96
+Health Care,1997,CYBX,308
+Health Care,1998,ENZN,129
+Health Care,1999,CHDX,400
+Health Care,2000,RDNT,537
+Health Care,2001,BIOS,475
+Health Care,2002,BDMS,147
+Health Care,2003,ALGN,437
+Health Care,2004,STEM,77
+Health Care,2005,QDEL,187
+Health Care,2006,ACOR,164
+Health Care,2007,BPAX,96
+Health Care,2008,ULGX,88
+Health Care,2009,VRML,3270
+Health Care,2010,OSIR,9
+Miscellaneous,1985,RRD,0
+Miscellaneous,1986,RRD,-5
+Miscellaneous,1987,RRD,-32
+Miscellaneous,1988,RRD,0
+Miscellaneous,1989,RRD,17
+Miscellaneous,1990,IDCC,0
+Miscellaneous,1991,IDCC,57
+Miscellaneous,1992,RRD,14
+Miscellaneous,1993,LABL,42
+Miscellaneous,1994,AVID,61
+Miscellaneous,1995,MLNK,100
+Miscellaneous,1996,REIS,176
+Miscellaneous,1997,MLNK,78
+Miscellaneous,1998,EBAY,109
+Miscellaneous,1999,EBAY,83
+Miscellaneous,2000,PDII,242
+Miscellaneous,2001,CRAI,125
+Miscellaneous,2002,ORCC,31
+Miscellaneous,2003,POWR,289
+Miscellaneous,2004,PFSW,111
+Miscellaneous,2005,NTES,56
+Miscellaneous,2006,USATP,549
+Miscellaneous,2007,BSQR,116
+Miscellaneous,2008,LQDT,25
+Miscellaneous,2009,RRD,235
+Miscellaneous,2010,SDBT,0
+Public Utilities,1986,CLFD,0
+Public Utilities,1987,CLFD,18
+Public Utilities,1988,CLFD,14
+Public Utilities,1989,CLFD,47
+Public Utilities,1990,OTTR,20
+Public Utilities,1991,ECOL,60
+Public Utilities,1992,MSEX,29
+Public Utilities,1993,JCS,43
+Public Utilities,1994,SYMM,61
+Public Utilities,1995,ADTN,116
+Public Utilities,1996,ATNI,82
+Public Utilities,1997,WSTL,134
+Public Utilities,1998,TLAB,50
+Public Utilities,1999,CIEN,136
+Public Utilities,2000,PCYO,86856
+Public Utilities,2001,GNCMA,73
+Public Utilities,2002,ECOL,56
+Public Utilities,2003,ZOOM,332
+Public Utilities,2004,CDZI,101
+Public Utilities,2005,AMOV,71
+Public Utilities,2006,NTLS,45
+Public Utilities,2007,SHEN,61
+Public Utilities,2008,INFN,41
+Public Utilities,2009,DRWI,710
+Public Utilities,2010,WIN,0
+Technology,1984,ADP,9
+Technology,1985,CA,32
+Technology,1986,MSFT,75
+Technology,1987,ASYS,100
+Technology,1988,ADBE,64
+Technology,1989,AMSWA,70
+Technology,1990,DELL,87
+Technology,1991,TECD,224
+Technology,1992,TIGR,409
+Technology,1993,MSCC,111
+Technology,1994,BBOX,390
+Technology,1995,ASMI,655
+Technology,1996,DELL,265
+Technology,1997,ANEN,288
+Technology,1998,RIMG,159
+Technology,1999,TIGR,5867
+Technology,2000,ADEP,263
+Technology,2001,MRGE,291
+Technology,2002,SOHU,383
+Technology,2003,LIVE,1228
+Technology,2004,VDSI,170
+Technology,2005,ATEA,148
+Technology,2006,SMSI,104
+Technology,2007,EMKR,250
+Technology,2008,MRGE,156
+Technology,2009,NLST,2931
+Technology,2010,PLXS,12
+Transportation,1984,AIRT,0
+Transportation,1985,AIRT,-24
+Transportation,1986,AIRT,0
+Transportation,1987,YRCW,-16
+Transportation,1988,AIRT,21
+Transportation,1989,YRCW,0
+Transportation,1990,HTLD,5
+Transportation,1991,AIRM,63
+Transportation,1992,PTSI,354
+Transportation,1993,LSTR,51
+Transportation,1994,EXPD,23
+Transportation,1995,PHII,34
+Transportation,1996,HTLD,40
+Transportation,1997,FWRD,186
+Transportation,1998,CHRW,17
+Transportation,1999,ABFS,62
+Transportation,2000,SKYW,53
+Transportation,2001,AIRM,54
+Transportation,2002,ODFL,80
+Transportation,2003,AIRT,287
+Transportation,2004,HA,69
+Transportation,2005,SKYW,73
+Transportation,2006,CHRW,47
+Transportation,2007,DRYS,147
+Transportation,2008,ALGT,154
+Transportation,2009,ATSG,1741
+Transportation,2010,VTNC,0
+n/a,1990,CSWC,0
+n/a,1991,DHFT,25
+n/a,1992,DHFT,52
+n/a,1993,DHFT,27
+n/a,1994,HIFS,14
+n/a,1995,HIFS,19
+n/a,1996,HIFS,32
+n/a,1997,DHFT,56
+n/a,1998,SCON,26
+n/a,1999,ACAS,15
+n/a,2000,DYNT,28
+n/a,2001,HIFS,29
+n/a,2002,HIFS,16
+n/a,2003,MCGC,72
+n/a,2004,TOWN,29
+n/a,2005,SCON,45
+n/a,2006,RAND,104
+n/a,2007,QCLN,45
+n/a,2008,TOWN,26
+n/a,2009,AINV,376
+n/a,2010,PMNA,0
